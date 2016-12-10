@@ -1,4 +1,4 @@
-//META{"name":"UserPopouts_Upgraded","description":"Adds a growing backdrop to popouts and stylized User Popouts.","author":"maple","version":"1.2"}*//{}
+//META{"name":"UserPopouts_Upgraded","description":"Adds a growing backdrop to popouts and stylized User Popouts.","author":"maple","version":"1.21"}*//{}
 
 /* User popout */
 
@@ -131,8 +131,12 @@
 .user-popout .header.streaming {
     padding-bottom: 6px;
 }
+.user-popout .header.streaming .status {
+    bottom: -6px;
+}
 .user-popout .header.streaming .avatar-popout {
     padding-bottom: 4px;
+    top: -2px;
 }
 .user-popout .member-roles {
     max-height: 90px;
