@@ -1,4 +1,4 @@
-//META{"name":"UserPopouts_Upgraded","description":"Adds a growing backdrop to popouts and stylized User Popouts.","author":"maple","version":"1.1"}*//{}
+//META{"name":"UserPopouts_Upgraded","description":"Adds a growing backdrop to popouts and stylized User Popouts.","author":"maple","version":"1.2"}*//{}
 
 /* User popout */
 
@@ -15,6 +15,8 @@
     border-radius: 0;
     background-position: 0px !important;
     background-repeat: no-repeat;
+
+    position: relative;
 }
 .user-popout .header:hover .avatar-wrapper {
     -webkit-filter: grayscale(14%);
@@ -25,6 +27,7 @@
     transition: -webkit-filter 100ms;
     background: #fff;
     border-bottom: 8px solid;
+    color: transparent;
     z-index: 2;
 }
 .user-popout .avatar-wrapper.no-hover {
@@ -35,14 +38,14 @@
     width: 200px;
     margin-top: -180px;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     top: 342px;
     transition: top 170ms ease-out;
 }
 .user-popout .username-wrapper {
     width: 200px;
     margin-top: -180px;
-    position: fixed;
+    position: absolute;
     top: 366px;
     transition: top 270ms ease-in-out;
     z-index: 0;
@@ -53,7 +56,7 @@
 .user-popout .avatar-wrapper:hover .avatar-hint {
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%);
     border-radius: 0;
-    transition: opacity 300ms ease-in 80ms
+    transition: opacity 300ms ease-in 80ms;
 }
 .user-popout .avatar-wrapper .avatar-hint {
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%);
@@ -80,12 +83,13 @@
     max-height: 35px;
 }
 .user-popout .avatar-wrapper .avatar-popout .status {
-    bottom: -22px;
+    bottom: -8px;
     width: 242px;
     height: 8px;
-    left: 4px;
+    left: 0px;
     box-shadow: inset 0 0 0 1.8px rgba(255,255,255,.2);
     border-radius: 0;
+    z-index: 4;
 }
 .user-popout .header:hover .avatar-wrapper .avatar-popout .status {
     -webkit-filter: contrast(105%);
@@ -95,14 +99,17 @@
     margin-top: 10px;
     margin-bottom: 4px;
 }
-.user-popout .username-wrapper .nickname, .user-popout .username-wrapper .discord-tag,
-.user-popout .header:hover .username-wrapper .activity, .user-popout .header:hover .creation-date-wrapper  {
+.user-popout .username-wrapper .nickname,
+.user-popout .username-wrapper .discord-tag,
+.user-popout .header:hover .username-wrapper .activty,
+.user-popout .header:hover .creation-date-wrapper  {
     opacity: 1;
     overflow: hidden;
     transition: opacity 200ms ease-in;
     transition-delay: 170ms;
 }
-.user-popout .username-wrapper .activity, .user-popout .creation-date-wrapper {
+.user-popout .username-wrapper .actiity,
+.user-popout .creation-date-wrapper {
     opacity: 0;
     transition: opacity 200ms;
 }
@@ -137,6 +144,9 @@
 .user-popout .body {
     z-index: 1;
     padding-top: 4px;
+}
+.user-popout .footer {
+    z-index: 1;
 }
 
 /* User Profile Modal */
@@ -184,9 +194,9 @@
 #user-profile-modal .actions .btn.add-friend:hover {
     background: #71cea3;
 }
-#user-profile-modal .actions .btn.add-friend{
+#user-profile-modal .actions .btn.add-friend {
     margin-left: -5px;
-    box-shadow: 1px 2px 3px 0 rgba(20,20,45,.2);
+    box-shadow: 1px 2px 3px 0 rgba(20,20,45,.06);
     background: #48c78d;
 }
 #user-profile-modal .actions .btn:-webkit-any(.disabled, .disabled:hover) {
@@ -229,8 +239,11 @@
     margin-left: 0px;
 }
 #user-profile-modal .scroller {
-    background: #fcfcfc;
+    background: #f9f9f9;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account {
+    background: #fff;
 }
 #user-profile-modal .header .header-info .header-info-inner .discord-tag .username {
-    color: #030303;
+    color: #030303 !important;
 }
