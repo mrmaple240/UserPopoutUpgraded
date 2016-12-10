@@ -1,16 +1,20 @@
-//META{"name":"UserPopouts_Upgraded","description":"Adds a growing backdrop to popouts and stylized User Popouts.","author":"maple","version":"1.0"}*//{}
+//META{"name":"UserPopouts_Upgraded","description":"Adds a growing backdrop to popouts and stylized User Popouts.","author":"maple","version":"1.1"}*//{}
 
 /* User popout */
 
-.user-popout .avatar-wrapper, .user-popout .avatar-wrapper .avatar-popout {
-    border-color: #f9f9f9;
+.user-popout .avatar-wrapper,
+.user-popout .avatar-wrapper .avatar-popout {
+    border-color: transparent !important;
+    background-color: transparent !important;
     margin: 0px 0px 0px;
     width: 100%;
     height: 242px;
     display: flex;
     flex: 1;
-    background-size: 100%;
+    background-size: 242px 242px;
     border-radius: 0;
+    background-position: 0px !important;
+    background-repeat: no-repeat;
 }
 .user-popout .header:hover .avatar-wrapper {
     -webkit-filter: grayscale(14%);
