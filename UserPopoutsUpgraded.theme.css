@@ -231,3 +231,6 @@
 #user-profile-modal .scroller {
     background: #fcfcfc;
 }
+#user-profile-modal .header .header-info .header-info-inner .discord-tag .username {
+    color: #030303;
+}
