@@ -116,7 +116,7 @@
 }
 .creation-date-wrapper {
     text-align: center;
-    top: 2px;
+    top: -160px;
     position: absolute;
     padding: 3px 0 !important;
 }
