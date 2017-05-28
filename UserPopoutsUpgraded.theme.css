@@ -181,7 +181,7 @@
     top: 14px;
     right: 14px;
     padding: 2px 2px;
-    trasition: .2s ease-in;
+    transition: .2s ease-in;
 }
 #user-profile-modal .header .additional-actions-icon:hover {
     box-shadow: 0 0 20px -4px rgba(255,255,255,.2) inset;
